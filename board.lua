@@ -10,8 +10,8 @@ function board.load()
 	board.m = math.ceil(win.width / cellSize)
 	board.n = math.ceil(win.height / cellSize)
 
-	board.life = Life:new(board.m, board.n)
-
+	-- board.life = Life:new(board.m, board.n)
+	board.life = Life(board.m, board.n)
 
 	board.life:live(3,2)
 	board.life:live(3,3)

@@ -1,8 +1,9 @@
 require("util")
 
-Life = {}
+-- Life = {}
+Life = class()
 
-function Life:new(m,n)
+function Life:init(m,n)
 	local matrix = {}
 	for i = 0, m do
 		local row = {}
@@ -16,10 +17,10 @@ function Life:new(m,n)
 	self.m = m 
 	self.n = n
 
-	local o = o or {}
-	setmetatable(o,self)
-	self.__index = self
-	return o
+	-- local o = o or {}
+	-- setmetatable(o,self)
+	-- self.__index = self
+	-- return o
 
 end
 
