@@ -1,6 +1,6 @@
 
 scale = 1
-win = { width = 600, height = 600 }
+win = { width = 600, height = 700 }
 
 function love.conf (w)
 	w.title  = "conway life"

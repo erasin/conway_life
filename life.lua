@@ -32,6 +32,14 @@ function Life:die(x,y)
 	self.matrix[x][y] = 0
 end
 
+function Life:toggle(x,y)
+	if self.matrix[x][y] == 1 then 
+		self.matrix[x][y] = 0
+	else
+		self.matrix[x][y] = 1
+	end
+end
+
 -- 下一周期更新
 function Life:next_gen()
 	local X = deepCopy(self.matrix)
@@ -42,7 +50,7 @@ function Life:next_gen()
 
 			for q = i-1,i+1 do 
 				for p = j-1, j+1 do 
-					if p > 0 and p < self.m and q > 0 and q < self.n then 
+					if p > 0 and p < self.n and q > 0 and q < self.m then 
 						s = s + matrix[q][p]
 					end
 				end
@@ -62,3 +70,5 @@ function Life:next_gen()
 
 	self.matrix = deepCopy(X)
 end
+
+return Life

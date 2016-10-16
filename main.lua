@@ -1,5 +1,5 @@
 
-require("board")
+board = require("board")
 
 function love.load()
 	time_start = love.timer.getTime()
